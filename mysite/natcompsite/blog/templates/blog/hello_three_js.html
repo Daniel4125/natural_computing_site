@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block scripts %}
+  {% load static %}
+  <script src="{% static 'lib/three.js' %}" type="text/javascript"></script>
+
+  
+
+{% endblock scripts %}
+
+{% block title %}
+  <title>My first three.js app</title>
+{% endblock title %}
+
+{% block canvasContent %}
+  {% comment %} needs to be in body of html for some reason {% endcomment %}
+  {% comment %} adjust width and height to change size of animation on screen {% endcomment %}
+  <canvas id="myCanvas" width="500" height="500">
+    Your browser does not support the HTML5 canvas tag.
+    {% load static %}
+    <script src="{% static 'js/hello_three.js' %}" type="text/javascript">></script>
+  </canvas>
+
+  
+{% endblock canvasContent %}
